@@ -10,7 +10,7 @@ public class Impresion extends Producto {
         this.fichero = fichero; // Inicializa el fichero
     }
 
-    // Getters y Setters
+    // Agregamos los Getters y Setters
     public String getTipoImpresion() {
         return tipoImpresion;
     }
