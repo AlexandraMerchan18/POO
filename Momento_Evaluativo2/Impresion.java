@@ -1,5 +1,5 @@
 public class Impresion extends Producto {
-    private String tipoImpresion; // Puede ser "Color" o "Blanco y Negro"
+    private String tipoImpresion; 
     private String modeloCamara; // Modelo de la cámara utilizada
     private String fichero; // Nombre del fichero
 
