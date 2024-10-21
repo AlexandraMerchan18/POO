@@ -1,6 +1,6 @@
 public class Producto {
     private String nombre;
-    private int numeroProducto; // Eliminamos el precio
+    private int numeroProducto; 
 
     public Producto(String nombre, int numeroProducto) {
         this.nombre = nombre;
