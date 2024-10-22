@@ -23,4 +23,9 @@ public class Camara extends Producto {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Cámara: " + marca + ", Modelo: " + modelo);
+    }
 }
