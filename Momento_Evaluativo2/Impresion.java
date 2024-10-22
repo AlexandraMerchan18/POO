@@ -1,16 +1,14 @@
 public class Impresion extends Producto {
-    private String tipoImpresion; 
-    private String modeloCamara; // Modelo de la cámara utilizada
-    private String fichero; // Nombre del fichero
+    private String tipoImpresion;
+    private Foto fotos; // Ahora usamos la clase Foto
 
-    public Impresion(String nombre, int numeroProducto, String tipoImpresion, String modeloCamara, String fichero) {
+    public Impresion(String nombre, int numeroProducto, String tipoImpresion) {
         super(nombre, numeroProducto);
         this.tipoImpresion = tipoImpresion;
-        this.modeloCamara = modeloCamara; // Inicializa el modelo de la cámara
-        this.fichero = fichero; // Inicializa el fichero
+        this.fotos = new Foto(); // Inicializamos el ArrayList de fotos
     }
 
-    // Agregamos los Getters y Setters
+    // Getters y Setters
     public String getTipoImpresion() {
         return tipoImpresion;
     }
@@ -19,27 +17,15 @@ public class Impresion extends Producto {
         this.tipoImpresion = tipoImpresion;
     }
 
-    public String getModeloCamara() {
-        return modeloCamara;
-    }
-
-    public void setModeloCamara(String modeloCamara) {
-        this.modeloCamara = modeloCamara;
-    }
-
-    public String getFichero() {
-        return fichero;
-    }
-
-    public void setFichero(String fichero) {
-        this.fichero = fichero;
+    public void agregarFoto(String fichero) {
+        fotos.agregarFichero(fichero);
     }
 
     @Override
     public void mostrarInfo() {
         super.mostrarInfo();
         System.out.println("Tipo de impresión: " + tipoImpresion);
-        System.out.println("Modelo de la cámara: " + modeloCamara);
-        System.out.println("Fichero: " + fichero);
+        fotos.print();
     }
 }
+
