@@ -1,21 +1,23 @@
+import java.util.ArrayList;
+
 public class Foto {
-    private String fichero;
+    private ArrayList<String> ficheros;
 
-    public Foto(String fichero) {
-        this.fichero = fichero;
+    public Foto() {
+        ficheros = new ArrayList<>();
     }
 
-    // Getter
-    public String getFichero() {
-        return fichero;
+    public void agregarFichero(String fichero) {
+        ficheros.add(fichero);
     }
 
-    // Setter
-    public void setFichero(String fichero) {
-        this.fichero = fichero;
+    public ArrayList<String> getFicheros() {
+        return ficheros;
     }
 
     public void print() {
-        System.out.println("Imprimiendo foto desde " + fichero);
+        for (String fichero : ficheros) {
+            System.out.println("Imprimiendo foto desde " + fichero);
+        }
     }
 }
